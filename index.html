@@ -8,22 +8,68 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>MoneySwitch</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <div>
-      <input type="number" name="" placeholder="From Vaue" id="from-value" />
-      <input type="text" name="" placeholder="From Country" id="from-country" />
-    </div>
-    <div>
-      <input type="text" name="" placeholder="to Country" id="to-country" />
-    </div>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">
+          <span>MoneySwitch</span> - Конвертация валют
+        </h1>
+      </div>
+    </header>
 
-    <button type="submit" id="btn">TEST</button>
+    <main class="main">
+      <section class="convert">
+        <div class="container">
+          <div class="convert__block">
+            <div class="convert__box">
+              <label for="from-value">
+                <input
+                  type="number"
+                  name=""
+                  class="convert__to-value convert__input"
+                  placeholder="Сумма для продажи"
+                  id="from-value"
+                />
+              </label>
+              <label for="from-country">
+                <input
+                  type="text"
+                  name=""
+                  class="convert__to-name convert__input"
+                  placeholder="Валюты продажи"
+                  id="from-country"
+                />
+              </label>
+            </div>
+            <div class="convert__box">
+              <label for="to-country">
+                <input
+                  type="text"
+                  name=""
+                  class="convert__from-name convert__input"
+                  placeholder="Валюта покупки"
+                  id="to-country"
+                />
+              </label>
+            </div>
+            <button type="submit" id="btn" class="convert__btn">
+              Посмотреть курс
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="result">
+        <div class="container">
+          <div class="result__block">
+            <h2 id="from" class="result__from-title"></h2>
+            <h3 id="to" class="result__to-title"></h3>
+          </div>
+        </div>
+      </section>
+    </main>
 
-    <h2 class="from"></h2>
-    =
-    <h3 class="to"></h3>
-
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/main.js" type="module"></script>
   </body>
 </html>
